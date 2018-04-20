@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 
 import { Transition } from 'react-transition-group';
+import PropTypes from 'prop-types';
 
 export default class FadeIn extends Component {
 
@@ -33,4 +34,12 @@ export default class FadeIn extends Component {
             </Transition>
         )
     }
+};
+
+FadeIn.propTypes = {
+    delay:      PropTypes.string,
+    direction:  PropTypes.string,
+    duration:    PropTypes.string.isRequired,
+    in:         PropTypes.bool.isRequired,
+    length:     PropTypes.string
 };
