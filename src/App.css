@@ -3,12 +3,12 @@
   font-family: 'Open Sans', sans-serif;
   background-color: #19181a;
   height: 100vh;
+  color: white;
 }
 
 .App-header {
   height: 150px;
   padding: 20px;
-  color: white;
 }
 
 .App-header h1 {

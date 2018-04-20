@@ -25,7 +25,7 @@ export default class FadeIn extends Component {
 
     render(){
         return (
-            <Transition in={this.props.in} timeout={this.props.duration} appear={true}>
+            <Transition in={this.props.in || true} timeout={this.props.duration} appear={true}>
                 {(state) => (
                     <div style={{...this.defaultStyle,...this.transitionStyles[state] }}>
                     {this.props.children}
@@ -39,7 +39,6 @@ export default class FadeIn extends Component {
 FadeIn.propTypes = {
     delay:      PropTypes.string,
     direction:  PropTypes.string,
-    duration:    PropTypes.string.isRequired,
-    in:         PropTypes.bool.isRequired,
+    duration:    PropTypes.number.isRequired,
     length:     PropTypes.string
 };
