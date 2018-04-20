@@ -1,14 +1,14 @@
 import React from 'react';
-import FadeInDown from '../transitions/fade-in-down';
+import FadeIn from '../transitions/fade-in';
 
 const Header = () => { return(
     <header className="App-header">
-        <FadeInDown in={true} duration={600} length={'30px'}>
+        <FadeIn in={true} duration={600} length={'30px'} direction={'bottom'}>
             <h2>Delos Corp welcomes you to</h2>
-        </FadeInDown>
-        <FadeInDown in={true} duration={600} length={'50px'}>
+        </FadeIn>
+        <FadeIn in={true} duration={600} length={'50px'} direction={'bottom'} >
             <h1>Westworld Clicky Game</h1>
-        </FadeInDown>
+        </FadeIn>
     </header>
 )};
 

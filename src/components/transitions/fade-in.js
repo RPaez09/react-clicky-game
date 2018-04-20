@@ -2,10 +2,11 @@ import React, { Component } from 'react';
 
 import { Transition } from 'react-transition-group';
 
-export default class FadeInDown extends Component {
+export default class FadeIn extends Component {
 
     defaultStyle = {
         transition: `all ${this.props.duration}ms ease-in-out`,
+        transitionDelay: this.props.delay || '0',
         opacity: 0,
         position: 'relative'
     };
@@ -13,11 +14,11 @@ export default class FadeInDown extends Component {
     transitionStyles = {
         entering: {
             opacity: 0,
-            bottom: this.props.length || '50px'
+            [this.props.direction]: this.props.length || '50px'
         },
         entered: {
             opacity: 1,
-            bottom: '0'
+            [this.props.direction]: '0'
         }
     };
 
