@@ -13,6 +13,7 @@
 
 .App-header h1 {
   font-weight: 400;
+  font-size: 46px;
 }
 
 .App-header h2{
@@ -20,8 +21,17 @@
   font-weight: 300;
 }
 
+.Board h4{
+  font-size: 18px;
+  font-weight: 300;
+}
+
 .Footer {
   position: fixed;
   bottom: 0;
   left: 30px;
+}
+
+.Footer h3 {
+  font-weight: 300;
 }
