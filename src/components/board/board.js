@@ -15,66 +15,85 @@ export default class Board extends Component {
             characters: [
                 {
                     name: 'Ashley',
-                    img: 'img/250x180/ashley.png'
+                    img: 'img/250x180/ashley.png',
+                    clicked: false
                 },
                 {
                     name: 'Bernard',
-                    img: 'img/250x180/bernard.png'
+                    img: 'img/250x180/bernard.png',
+                    clicked: false
                 },
                 {
                     name: 'Charlotte',
-                    img: 'img/250x180/charlotte.png'
+                    img: 'img/250x180/charlotte.png',
+                    clicked: false
                 },
                 {
                     name: 'Clementine',
-                    img: 'img/250x180/clementine.png'
+                    img: 'img/250x180/clementine.png',
+                    clicked: false
                 },
                 {
                     name: 'Dolores',
-                    img: 'img/250x180/dolores.png'
+                    img: 'img/250x180/dolores.png',
+                    clicked: false
                 },
                 {
                     name: 'Elsie',
-                    img: 'img/250x180/elsie.png'
+                    img: 'img/250x180/elsie.png',
+                    clicked: false
                 },
                 {
                     name: 'Ford',
-                    img: 'img/250x180/ford.png'
+                    img: 'img/250x180/ford.png',
+                    clicked: false
                 },
                 {
                     name: 'Logan',
-                    img: 'img/250x180/logan.png'
+                    img: 'img/250x180/logan.png',
+                    clicked: false
                 },
                 {
                     name: 'Lutz',
-                    img: 'img/250x180/lutz.png'
+                    img: 'img/250x180/lutz.png',
+                    clicked: false
                 },
                 {
                     name: 'Maeve',
-                    img: 'img/250x180/maeve.png'
+                    img: 'img/250x180/maeve.png',
+                    clicked: false
                 },
                 {
                     name: 'MIB',
-                    img: 'img/250x180/mib.png'
+                    img: 'img/250x180/mib.png',
+                    clicked: false
                 },
                 {
                     name: 'Peter',
-                    img: 'img/250x180/peter.png'
+                    img: 'img/250x180/peter.png',
+                    clicked: false
                 },
                 {
                     name: 'Ted',
-                    img: 'img/250x180/ted.png'
+                    img: 'img/250x180/ted.png',
+                    clicked: false
                 },
                 {
                     name: 'Teresa',
-                    img: 'img/250x180/teresa.png'
+                    img: 'img/250x180/teresa.png',
+                    clicked: false
                 },
                 {
                     name: 'William',
-                    img: 'img/250x180/william.png'
+                    img: 'img/250x180/william.png',
+                    clicked: false
                 }
             ]
         };
+    }
+
+    onCharacterClick = ( index ) =>{
+        console.log( this.state.characters[ index ].name );
     }
 
     render(){
@@ -88,7 +107,7 @@ export default class Board extends Component {
                     delay={'1s'}>
                     <h4>Try to click on every character once. Once they are clicked they will shuffle.<br/>Try not to click the same character twice or you'll have to start all over!</h4>
                 </FadeIn>
-                <CharacterBox characters={this.state.characters} />
+                <CharacterBox characters={this.state.characters} onCharacterClick={this.onCharacterClick} />
             </div>
         )
     }
