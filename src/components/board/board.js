@@ -10,7 +10,13 @@ export default class Board extends Component {
         this.state = {
             user: {
                 score: 0 
-            }
+            },
+            characters: [
+                {
+                    name: 'Sample 1',
+                    img: ''
+                }
+            ]
         };
     }
 
@@ -22,7 +28,7 @@ export default class Board extends Component {
                     duration={450}
                     length={'30px'}
                     direction={'bottom'}
-                    delay={'2s'}>
+                    delay={'1s'}>
                     <h4>Try to click on every character once. Once they are clicked they will shuffle.<br/>Try not to click the same character twice or you'll have to start all over!</h4>
                 </FadeIn>
             </div>
