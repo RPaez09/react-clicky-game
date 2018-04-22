@@ -3,6 +3,13 @@ import React, { Component } from 'react';
 import FadeIn from '../transitions/fade-in';
 import CharacterBox from './characterBox';
 
+const shuffleArray = arr => (
+    arr
+      .map(a => [Math.random(), a])
+      .sort((a, b) => a[0] - b[0])
+      .map(a => a[1]) 
+);
+
 export default class Board extends Component {
 
     constructor(props){
@@ -93,7 +100,28 @@ export default class Board extends Component {
     }
 
     onCharacterClick = ( index ) =>{
-        console.log( this.state.characters[ index ].name );
+        if( !this.state.characters[index].clicked ){
+            this.setState({
+                characters: shuffleArray( this.state.characters.map( (character, current) =>  {
+                    return ( current === index ) ? { ...character, clicked:true } : character
+                })),
+                user: {
+                    ...this.state.user,
+                    score: this.state.user.score + 1
+                }
+            });
+            //and shuffle
+        } else {
+            this.setState({
+                characters: shuffleArray(this.state.characters.map( character => { return { ...character, clicked : false } })),
+                user: {
+                    ...this.state.user,
+                    score: 0
+                }
+            });
+            //and shuffle
+        }
+        
     }
 
     render(){
