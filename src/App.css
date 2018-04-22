@@ -1,7 +1,13 @@
+body {
+  background: url(/img/bg-main.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
 .App {
   text-align: center;
   font-family: 'Open Sans', sans-serif;
-  background-color: #19181a;
+  background-color: rgba(0,0,0,.75);
   height: 100vh;
   color: white;
   overflow: hidden;
