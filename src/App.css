@@ -4,11 +4,12 @@
   background-color: #19181a;
   height: 100vh;
   color: white;
+  overflow: hidden;
 }
 
 .App-header {
-  height: 150px;
-  padding: 20px;
+  height: 130px;
+  padding: 20px 20px 0 20px;
 }
 
 .App-header h1 {
@@ -24,6 +25,18 @@
 .Board h4{
   font-size: 18px;
   font-weight: 300;
+}
+
+.character-box{
+  padding: 20px 15px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+.character:hover {
+  transition: transform .2s ease-in-out;
+  transform: scale(1.03,1.03);
 }
 
 .Footer {
