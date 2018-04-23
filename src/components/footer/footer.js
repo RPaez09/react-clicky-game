@@ -10,7 +10,7 @@ const Footer = () => {
                 direction={'top'}
                 length={'20px'}
                 duration={500}>
-                <h3>Richard Paez | 2018 | Richardp809@gmail.com</h3>
+                <a href="https://github.com/rpaez09" target="_blank"><h3>Richard Paez | 2018 | Richardp809@gmail.com</h3></a>
             </FadeIn>
         </footer>
     )
